@@ -1,0 +1,38 @@
+# Temperature Conversion Program
+# Task-01 as part of internship at Prodigy Infotech
+
+print("======================================")
+print("     Temperature Conversion Tool")
+print("           Prodigy Infotech")
+print("======================================\n")
+
+print("Convert from:")
+print("1. Celsius")
+print("2. Fahrenheit")
+print("3. Kelvin")
+
+choice = input("Enter your choice (1/2/3): ")
+
+if choice == '1':
+    c = float(input("Enter temperature in Celsius: "))
+    f = (c * 9/5) + 32
+    k = c + 273.15
+    print(f"\n{c} °C is equal to:")
+    print(f"{f:.2f} °F")
+    print(f"{k:.2f} K")
+elif choice == '2':
+    f = float(input("Enter temperature in Fahrenheit: "))
+    c = (f - 32) * 5/9
+    k = (f - 32) * 5/9 + 273.15
+    print(f"\n{f} °F is equal to:")
+    print(f"{c:.2f} °C")
+    print(f"{k:.2f} K")
+elif choice == '3':
+    k = float(input("Enter temperature in Kelvin: "))
+    c = k - 273.15
+    f = (k - 273.15) * 9/5 + 32
+    print(f"\n{k} K is equal to:")
+    print(f"{c:.2f} °C")
+    print(f"{f:.2f} °F")
+else:
+    print("\nInvalid choice. Please run the program again and select 1, 2, or 3.")
